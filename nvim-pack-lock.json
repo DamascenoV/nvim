@@ -2,6 +2,7 @@
   "plugins": {
     "mini.nvim": {
       "rev": "ac5dffcc52b8378fbb15efeb0497a83e57a0b01c",
+
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-treesitter": {
