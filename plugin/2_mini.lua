@@ -9,9 +9,9 @@ later(function() require('mini.surround').setup() end)
 later(function() require('mini.diff').setup() end)
 later(function() require('mini.jump').setup() end)
 later(function() require('mini.bufremove').setup() end)
-later(function() require('mini.operators').setup() end)
 later(function() require('mini.pairs').setup() end)
 later(function() require('mini.splitjoin').setup() end)
+later(function() require('mini.operators').setup({ replace = { prefix = 'cr' }}) end)
 
 later(function()
   require('mini.move').setup({

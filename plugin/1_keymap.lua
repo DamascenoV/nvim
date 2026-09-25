@@ -67,6 +67,7 @@ keymap('n', '<leader>fo', '<cmd>Pick oldfiles<CR>', { desc = '[F]ind recently [O
 -- Git
 keymap('n', '<leader>GD', '<cmd>Git diff<CR>', { desc = '[G]it [d]iff' })
 keymap('n', '<leader>GS', '<cmd>Git status<CR>', { desc = '[G]it [S]tatus' })
+keymap('n', '<leader>GC', '<cmd>Git commit<CR>', { desc = '[G]it [C]ommit' })
 keymap('n', '<leader>sc', '<cmd>lua MiniGit.show_at_cursor()<CR>', { desc = 'Git [S]how at [C]ursor' })
 keymap('n', '<leader>sh', '<cmd>lua MiniGit.show_range_history()<CR>', { desc = 'Git [S]how range [H]istory' })
 
