@@ -1,5 +1,3 @@
-require('util.lsp_preview').setup()
-
 vim.lsp.enable({
   'cssls',
   'emmet_ls',
