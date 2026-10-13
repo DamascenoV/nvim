@@ -6,6 +6,7 @@ vim.g.maplocalleader = ','
 vim.g.netrw_preview = 1
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 1
+vim.g.netrw_browse_split = 4
 vim.opt.title = true
 vim.opt.hlsearch = true
 vim.opt.number = true
