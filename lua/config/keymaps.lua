@@ -42,6 +42,7 @@ keymap('v', '>', '>gv', { silent = true })
 keymap('n', '<leader>Nc', '<cmd>e ~/.config/nvim<CR>', { desc = '[N]eovim [c]onfig' })
 
 keymap('n', '<leader>x', '<cmd>bdelete!<CR>', { desc = 'Close Buffer' })
+keymap('n', '<leader>bd', ':bdel <Tab>', { desc = 'Close Buffer' })
 
 keymap('n', '<leader>cp', ':Compile ', { desc = '[C]ompile' })
 
@@ -53,6 +54,6 @@ keymap('n', '<leader>Q', function()
 end, { desc = 'Project [Q]uick Diagnostics' })
 keymap('n', '<leader>s', '<cmd>cwindow<CR>', { desc = '[Q]uick List' })
 keymap('n', '<leader>ff', ':find ', { desc = '[F]ind [F]iles' })
-keymap('n', '<leader>fb', ':buf ', { desc = '[F]ind [B]uffers' })
+keymap('n', '<leader>fb', ':buf <Tab>', { desc = '[F]ind [B]uffers' })
 keymap('n', '<leader>fg', ':Grep ', { desc = '[F]ind [G]rep' })
 keymap('n', '<leader>pu', vim.pack.update, { desc = '[P]ack [U]pdate' })

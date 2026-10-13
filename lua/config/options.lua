@@ -4,8 +4,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 vim.g.netrw_preview = 1
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 1
 vim.opt.title = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.inccommand = 'split'
@@ -29,12 +31,13 @@ vim.opt.linebreak = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+vim.opt.imsearch = 0
 vim.opt.incsearch = true
 vim.opt.scrolloff = 1
 vim.opt.showtabline = 1
 vim.opt.tabclose = 'uselast'
 vim.opt.wildoptions = 'fuzzy'
-vim.opt.wildmode = 'list:longest'
+vim.opt.wildmode = 'longest:full'
 vim.opt.wildignore = '.git,.6'
 vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert', 'fuzzy', 'popup' }
 vim.opt.complete:append('f,kspell')
@@ -55,10 +58,12 @@ vim.opt.cpoptions:remove('_')
 vim.o.splitkeep = 'topline'
 vim.o.iskeyword = '@,48-57,_,192-255,-'
 vim.o.ruler = false
+vim.o.wildcharm = vim.o.wildchar
 
 vim.opt.termguicolors = true
 vim.cmd.colorscheme('tama')
 
+vim.o.laststatus = 2
 vim.o.pumheight = 10
 vim.o.pummaxwidth = 69
 vim.o.pumborder = 'bold'
@@ -73,16 +78,16 @@ require('vim._core.ui2').enable({
   msg = {
     target = 'cmd',
     cmd = {
-      max_height = 0.2,
+      max_height = 0.5,
     },
     msg = {
-      height = 0.2,
+      height = 0.5,
     },
     dialog = {
-      height = 0.2,
+      height = 0.5,
     },
     pager = {
-      height = 0.2,
+      height = 0.5,
     },
   },
 })
