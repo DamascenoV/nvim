@@ -67,8 +67,8 @@ vim.cmd.colorscheme('tama')
 vim.o.laststatus = 2
 vim.o.pumheight = 10
 vim.o.pummaxwidth = 69
-vim.o.pumborder = 'bold'
-vim.o.winborder = 'bold'
+vim.o.pumborder = 'rounded'
+vim.o.winborder = 'rounded'
 vim.o.writebackup = false
 
 vim.diagnostic.config({ virtual_text = true })
