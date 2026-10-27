@@ -45,7 +45,6 @@ vim.opt.complete:append('f,kspell')
 vim.opt.shortmess:append('c')
 vim.opt.colorcolumn = '120'
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.pumblend = 17
 vim.opt.autoindent = true
 vim.opt.cindent = true
 vim.opt.showbreak = string.rep(' ', 3)
