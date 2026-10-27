@@ -49,6 +49,35 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function() vim.opt_local.colorcolumn = '' end,
 })
 
+-- Align netrw's long-list details with the window's right edge.
+local netrw_group = vim.api.nvim_create_augroup('NetrwLayout', { clear = true })
+vim.api.nvim_create_autocmd('FileType', {
+  group = netrw_group,
+  pattern = 'netrw',
+  callback = function()
+    vim.opt_local.colorcolumn = ''
+    if vim.w.netrw_liststyle ~= 1 then return end
+    local info = vim.fn.getwininfo(vim.api.nvim_get_current_win())[1]
+    local date_width = vim.fn.strdisplaywidth(vim.fn.strftime(vim.g.netrw_timefmt))
+    vim.g.netrw_maxfilenamelen = math.max(1, info.width - info.textoff - date_width - 18)
+  end,
+})
+vim.api.nvim_create_autocmd('WinResized', {
+  group = netrw_group,
+  callback = function()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+      local buf = vim.api.nvim_win_get_buf(win)
+      if vim.bo[buf].filetype == 'netrw' and vim.w[win].netrw_liststyle == 1 then
+        vim.api.nvim_win_call(win, function()
+          local view = vim.fn.winsaveview()
+          vim.fn['netrw#LocalBrowseCheck'](vim.b.netrw_curdir)
+          vim.fn.winrestview(view)
+        end)
+      end
+    end
+  end,
+})
+
 -- Ripgrep integration
 if vim.fn.executable('rg') == 1 then
   ---@diagnostic disable-next-line: duplicate-set-field
