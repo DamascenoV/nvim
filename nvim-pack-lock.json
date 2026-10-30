@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "ninetyfive.nvim": {
+      "rev": "e66334390f0aa4d3e5c0e71c22de6a3eae259376",
+      "src": "https://github.com/numerataz/ninetyfive.nvim"
+    },
     "nvim-treesitter": {
       "rev": "a2f694478be07f89c2d03cc17858a8745a400c4b",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"

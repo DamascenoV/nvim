@@ -9,3 +9,4 @@ require('util.search').setup()
 
 -- plugins
 require('plugins.treesitter')
+require('plugins.ninetyfive')
