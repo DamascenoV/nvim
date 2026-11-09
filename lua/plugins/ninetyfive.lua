@@ -6,6 +6,6 @@ require("ninetyfive").setup({
   enable_on_startup = true,
   mappings = {
     accept = "<tab>",
-    reject = "<C-x>",
+    reject = "<C-g>",
   }
 })
