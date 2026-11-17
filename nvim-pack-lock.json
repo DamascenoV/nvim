@@ -5,7 +5,7 @@
       "src": "https://github.com/numerataz/ninetyfive.nvim"
     },
     "nvim-treesitter": {
-      "rev": "19bdfc04f40ed2ccb3340591d125f759b0406875",
+      "rev": "b706d642dd20d0922e7e92365dc73617f0fdb4ea",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     }
   }

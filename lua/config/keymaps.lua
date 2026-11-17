@@ -1,7 +1,5 @@
 local keymap = vim.keymap.set
 
-keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 keymap('i', '<C-s>', vim.lsp.buf.signature_help, { silent = true })
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 keymap('', '<C-w><Up>', '<cmd>resize -2<CR>', { silent = true })
@@ -32,10 +30,6 @@ keymap('n', '<leader>bt', function()
   end
 end, { silent = true, desc = '[b]ackground [t]oggle' })
 
-keymap('n', '<leader>sr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[S]ubstitute [R]ename' })
-
-keymap('n', '<leader>V', '<cmd>vnew<CR>', { silent = true, desc = 'Vertical Split' })
-keymap('n', '<leader>H', '<cmd>split_f<CR>', { silent = true, desc = 'Horizontal Split' })
 keymap('v', '<', '<gv', { silent = true })
 keymap('v', '>', '>gv', { silent = true })
 
